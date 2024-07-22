@@ -1,4 +1,6 @@
-##Problems    1. Write a program for user registration in FastAPI ( Using two database PostgreSQL and MobgoDB )
+##Problems   
+
+ 1. Write a program for user registration in FastAPI ( Using two database PostgreSQL and MobgoDB )
 
         a. Registration fields – Full Name,Email,Password,Phone,Profile_picture
         b. First Name,Password,Email,Phone — postgreSQL
@@ -35,6 +37,8 @@ Hint : Unique user_id, Connect two tables (Users and Profile) using user_id as f
 
 
 # Solutions
+
+
 for making it work anywhere i had containerised the solutions
 
 
