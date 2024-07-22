@@ -1,0 +1,8 @@
+fastapi[all]
+databases[postgresql]
+sqlalchemy
+uvicorn
+psycopg2-binary
+python-multipart
+motor
+pillow

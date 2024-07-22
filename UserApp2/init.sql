@@ -1,0 +1,16 @@
+DROP TABLE IF EXISTS "Profile";
+DROP TABLE IF EXISTS "Users";
+
+CREATE TABLE IF NOT EXISTS "Users" (
+  "user_id" VARCHAR(255) PRIMARY KEY,
+  "fullname" VARCHAR(255) NOT NULL,
+  "email" VARCHAR(255) NOT NULL UNIQUE,
+  "password" VARCHAR(255) NOT NULL,
+  "phone" VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS "Profile" (
+    "id" SERIAL PRIMARY KEY,
+    "user_id" VARCHAR(255) REFERENCES "Users"("user_id") ON DELETE CASCADE,
+    "image" BYTEA
+);
