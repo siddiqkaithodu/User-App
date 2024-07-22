@@ -1,0 +1,158 @@
+
+<style>
+    @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html, body {
+        height: 100%;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        margin: 20px;
+        background: #f3f3f3;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .card {
+        flex: 0 0 calc(25% - 20px); /* Flex grow, flex shrink, flex basis */
+        border-radius: 5px;
+        box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+        border: none;
+        margin-bottom: 20px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .card-header {
+        background-color: transparent;
+        border-bottom: none;
+        padding: 15px;
+    }
+
+    .card-header h5 {
+        margin-bottom: 0;
+        color: #222;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .card-block {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .user-image {
+        position: relative;
+        margin: 0 auto;
+        display: inline-block;
+        padding: 5px;
+        width: 90px;
+        height: 90px;
+    }
+
+    .user-image img {
+        z-index: 20;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+
+    .bg-c-blue {
+        background: linear-gradient(45deg, #4099ff, #73b4ff);
+        color: #fff;
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .text-muted {
+        color: #919aa3 !important;
+    }
+
+    .user-social-link i {
+        font-size: 20px;
+    }
+
+    .text-facebook {
+        color: #3B5997;
+    }
+
+    .text-twitter {
+        color: #42C0FB;
+    }
+
+    .text-dribbble {
+        color: #EC4A89;
+    }
+    nav > ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    background-color: indigo;
+    color: white;
+    padding: 10px;
+}
+
+nav > ul > li > a{
+    text-decoration: none;
+    color: white;
+}
+
+nav > ul > li > a:hover{
+    color: #333;
+    background-color: white;
+}
+nav > ul > li{
+    padding: 10px;
+    border-radius: 5px;
+}
+</style>
+<header>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/view_users">Users</a></li>
+            <li><a href="/register">Register</a></li>
+            <li><a href="/login">Login</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="container">
+    {% for user in users %}
+    <div class="card user-card">
+        <div class="card-header">
+            <h5>Profile</h5>
+        </div>
+        <div class="card-block">
+            <div class="user-image">
+                {% if user.image %}
+                <img src="data:image/png;base64,{{ user.image}}" alt="profile picture" class="img-radius">
+                {% else %}
+                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="img-radius" alt="User-Profile-Image">
+                {% endif %}
+            </div>
+            <h5 class="f-w-600 m-t-15 m-b-10">{{ user.fullname }}</h5>
+            <p class="text-muted">Email: {{ user.email }}</p>
+            <div class="bg-c-blue">
+                <i class="fa fa-comment"></i>
+                <p>{{ user.phone }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+

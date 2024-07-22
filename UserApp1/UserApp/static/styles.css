@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f4f4f4;
+}
+nav > ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    background-color: indigo;
+    color: white;
+    padding: 10px;
+}
+
+nav > ul > li > a{
+    text-decoration: none;
+    color: white;
+}
+
+nav > ul > li > a:hover{
+    color: #333;
+    background-color: white;
+}
+nav > ul > li{
+    padding: 10px;
+    border-radius: 5px;
+}
+
+footer
+{
+    background-color:orange;
+    color: white;
+    text-align: center;
+    /*bottom: -1;*/
+    padding: 10px;
+}
+#header{
+    background-color: peru;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+/* Import Google font - Poppins */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  min-height: 100vh;
+  width: 100%;
+  background: #009579;
+}
+.container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 430px;
+  width: 100%;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+.container .registration{
+  display: none;
+}
+#check:checked ~ .registration{
+  display: block;
+}
+#check:checked ~ .login{
+  display: none;
+}
+#check{
+  display: none;
+}
+.container .form{
+  padding: 2rem;
+}
+.form header{
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+ .form input{
+   height: 60px;
+   width: 100%;
+   padding: 0 15px;
+   font-size: 17px;
+   margin-bottom: 1.3rem;
+   border: 1px solid #ddd;
+   border-radius: 6px;
+   outline: none;
+ }
+ .form input:focus{
+   box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+ }
+.form a{
+  font-size: 16px;
+  color: #009579;
+  text-decoration: none;
+}
+.form a:hover{
+  text-decoration: underline;
+}
+.form input.button{
+  color: #fff;
+  background: #009579;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 1.7rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.form input.button:hover{
+  background: #006653;
+}
+.signup{
+  font-size: 17px;
+  text-align: center;
+}
+.signup label{
+  color: #009579;
+  cursor: pointer;
+}
+.signup label:hover{
+  text-decoration: underline;
+}
+
+.button{  
+  float:left;
+  width:200px;
+  padding:20px 30px;
+  margin:30px;
+  text-align:center;
+  font-weight:bold;
+  cursor:pointer;
+  transition:background .5s;
+}
+
+#success{
+  background:#03a679;
+  color:#f0f0f0;  
+}
+
+
+.alert {
+  padding: 20px;
+  background-color: #3ae643;
+  color: white;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+  border-radius: 5px;
+  opacity: 1;
+  animation: fadeOut 8s forwards; /* Apply fadeOut animation */
+}
+
+.alert .closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.alert .closebtn:hover {
+  color: black;
+}
+
+.alert strong {
+  font-weight: bold;
+}
+
+/* Define the fadeOut animation */
+@keyframes fadeOut {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}

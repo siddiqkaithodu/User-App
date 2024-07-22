@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title%} {% endblock %}</title>
+  <link rel="stylesheet" href="../static/styles.css"/>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/view_users">Users</a></li>
+            <li><a href="/register">Register</a></li>
+            <li><a href="/login">Login</a></li>
+        </ul>
+    </nav>
+</header>
+<div id = "header">
+    <h1>USER APP</h1>
+</div>
+
+{% block content%} {% endblock %}
+
+<!--<footer>-->
+
+<!--</footer>-->
+</body>
+</html>

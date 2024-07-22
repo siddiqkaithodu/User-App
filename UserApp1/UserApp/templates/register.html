@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}Registration{% endblock %}
+{% block content %}
+{% if alert %}
+  <div class="alert">
+      <span class="closebtn">&times;</span>
+      <strong>Info!</strong> {{alert}}
+  </div>
+{% endif %}
+<div class="container">
+    <input type="checkbox" id="check">
+    <div class="login form">
+      <header>Login</header>
+      <form action="/login" method="post">
+        <input type="text" name="email" placeholder="Enter your email" required>
+        <input type="password" name="password" placeholder="Enter your password" required>
+        <a href="#">Forgot password?</a>
+        <button type="submit" class="button">Login</button>
+      </form>
+      <div class="signup">
+        <span class="signup">Don't have an account?
+         <label for="check">Signup</label>
+        </span>
+      </div>
+    </div>
+    <div class="registration form">
+      <header>Signup</header>
+      <form action="/register_user" method="post" enctype="multipart/form-data">
+        <label for="fullname"> Full name</label>
+        <input type="text" name="fullname" id="fullname" required>
+        <label for="email"> Email</label>
+        <input type="email" name="email" id="email" required>
+        <label for="password"> Password</label>
+        <input type="password" name="password" id="password" required>
+        <label for="phone"> Phone</label>
+        <input type="text" name="phone" id="phone" required>
+        <label for="profile"> Profile Picture</label>
+        <input type="file" name="profile" id="profile" required>
+        <button type="submit">Register</button>
+    </form>
+      <div class="signup">
+        <span class="signup">Already have an account?
+         <label for="check">Login</label>
+        </span>
+      </div>
+    </div>
+  </div>
+{% endblock %}
